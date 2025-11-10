@@ -9,7 +9,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(180deg, #6b21a8, #db2777);
-      color: rgb(255, 255, 255);
+      color: #fff;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -18,99 +18,108 @@
       height: 100vh;
     }
 
+    .inicio-sesion {
+      margin-top: 10px; 
+      margin-bottom: 5px; 
+    }
+
+    .inicio-sesion h2 {
+      font-size: 26px;
+      color: #39ff14;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: parpadeo 2s infinite alternate;
+      margin: 8px 0; 
+    }
+
+    @keyframes parpadeo {
+      0% { text-shadow: 0 0 10px #14ffe4; opacity: 1; }
+      100% { text-shadow: 0 0 30px #00ff88; opacity: 0.8; }
+    }
+
     .logo {
-      font-size: 50px;
-      margin-bottom: 20px;
+      font-size: 46px;
+      margin-bottom: 5px; 
     }
 
     h1 {
-      margin: 0;
-      font-size: 32px;
+      margin: 5px 0; 
+      font-size: 30px;
       font-weight: bold;
     }
 
     p {
-      margin: 12px 0 24px 0;
-      margin-bottom: 30px;
-      font-size: 18px;
+      margin: 6px 0 14px 0; 
+      font-size: 17px;
+      max-width: 500px;
     }
 
-    .botones{ 
+    .botones { 
       display: flex;
-      gap: 15px;
+      gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 40px;
+      margin: 15px 0; 
     } 
 
     .btn {
-      background: rgb(255, 255, 255);
+      background: #fff;
       color: #1e40af;
       border: none;
-      padding: 12px 24px;
-      width: 200px;
-      font-size: 16px;
+      padding: 10px 20px;
+      width: 180px;
+      font-size: 15px;
       border-radius: 20px;
       cursor: pointer;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
-      margin: 0 10px;
-      margin-bottom: 30px;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
       background: #f3f4f6;
       color: #2194a8;
-      width: 180px;
-      border: 2px solid #f3f4f6;
       transform: scale(1.05);
-      border-radius: 20px;
     }
 
     .btn.secondary {
       background: #f3f4f6;
-      border: 2px solid #f3f4f6;
       color: #1e40af;
-      border-radius: 20px;
-    }
-
-    .btn.secondary:hover {
-      background: #f3f4f6;
-      color: #2194a8;
-      width: 180px;
-      
     }
 
     img {
-      margin-top: 40px;
+      margin-top: 20px;
       border-radius: 20px;
-      width: 200px;
+      width: 160px;
       height: auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      margin: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <div class="logo">🍷</div>
-  <h1>Bienvenido a BacoApp </h1>
+  <h1>Bienvenido a BacoApp</h1>
   <p>Lo mejor en vinos, rones, whiskys y mucho más, todo al mejor precio y calidad.</p>
 
+  <section class="inicio-sesion">
+    <h2>Inicio de sesión</h2>
+  </section>
+
   <div class="botones">
-    <a href="tienda.html" class="btn">Entrar como invitado</a>
-    <a href="login.html" class="btn secondary">Iniciar sesión</a>
+    <a href="login.html?rol=cliente" class="btn">Inicio clientes</a>
+    <a href="login.html?rol=admin" class="btn secondary">Inicio administrador</a>
   </div>
-  
-<img src="img/logo_bacoapp.png" width="200" height="100" alt="Logo BacoApp">
 
-<footer>
-  <p>&copy; 2025 BacoApp. Todos los derechos reservados.</p>
-  <style>
-    footer {
-      margin: 25px;
-    }
-  </style>
-</footer>
+  <img src="img/logo_bacoapp.png" alt="Logo BacoApp">
 
+  <footer>
+    <p>&copy; 2025 BacoApp. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
+
