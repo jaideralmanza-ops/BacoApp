@@ -115,12 +115,34 @@ footer {
 }
 
 
+.btn-salir {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.btn-salir:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #6b21a8;
+}
+
+
 
 
 </style>
 </head>
 
 <body>
+  <a href="login.html?rol=cliente" class="btn-salir">← Salir</a>
+
 <header>
     <h1>Tienda BacoApp</h1>
     <div class="nav">
