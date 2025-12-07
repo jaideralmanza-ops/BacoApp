@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro clientes</title>
+
+    <link rel="stylesheet" href="./css/registro.css">
+
+    
+    
+</head>
+<body>
+
+    
+    <h1>Tipo de registro</h1>
+    <select id="TipoRegistro" name="Tipo de registro">
+        <option value="">Seleccione una opcion</option>
+        <option value="Negocio">Negocio</option>
+        <option value="PersonaNatural">Persona natural</option>
+        
+    </select>
+
+    
+
+    <div><form id="formNegocio" style="display:none;">
+        <input type="text" id="NombreNegocio" placeholder="Nombre del Negocio" >
+        <input type="text" id="NIT" placeholder="NIT o RUT" >
+        <input type="text" id="Direccion" placeholder="Direccion" >
+        <input type="number" id="Telefono" placeholder="Telefono" >
+        <input type="email" id="Email" placeholder="Email" >
+        <input type="text" id="Usuario" placeholder="Usuario" >
+        <input type="password" id="Password" placeholder="Password" >
+        <button type="submit" class="btn" id="btn-registrarse">Registrarse</button>
+    </form>
+    </div>
+    
+    <div><form id="formPersona" style="display:none;">
+        <input type="text" id="NombreCompleto" placeholder="Nombre completo" >
+        <input type="number" id="DocumentoIdentidad" placeholder="Documento de identidad" >
+        <input type="text y number" id="Direccion" placeholder="Direccion" >
+        <input type="number" id="Telefono" placeholder="Telefono" >
+        <input type="email" id="Email" placeholder="Email" >
+        <input type="text" id="Usuario" placeholder="Usuario" >
+        <input type="password" id="Password" placeholder="Password" >
+        <button type="submit" class="btn" id="btn-registrarse">Registrarse</button>
+
+    </form>
+    </div>
+    
+    
+    
+<div class="extra">
+        ¿Ya tienes cuenta? <a href="login.html?rol=cliente">Inicia sesión aquí</a>
+        </div>
+
+        <script src="./js/registro.js"></script>
+</body>
+
+
+
+
+</html>

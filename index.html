@@ -1,125 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bienvenido a BacoApp</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #6b21a8, #db2777);
-      color: #fff;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .inicio-sesion {
-      margin-top: 10px; 
-      margin-bottom: 5px; 
-    }
-
-    .inicio-sesion h2 {
-      font-size: 26px;
-      color: #39ff14;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      animation: parpadeo 2s infinite alternate;
-      margin: 8px 0; 
-    }
-
-    @keyframes parpadeo {
-      0% { text-shadow: 0 0 10px #14ffe4; opacity: 1; }
-      100% { text-shadow: 0 0 30px #00ff88; opacity: 0.8; }
-    }
-
-    .logo {
-      font-size: 46px;
-      margin-bottom: 5px; 
-    }
-
-    h1 {
-      margin: 5px 0; 
-      font-size: 30px;
-      font-weight: bold;
-    }
-
-    p {
-      margin: 6px 0 14px 0; 
-      font-size: 17px;
-      max-width: 500px;
-    }
-
-    .botones { 
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 15px 0; 
-    } 
-
-    .btn {
-      background: #fff;
-      color: #1e40af;
-      border: none;
-      padding: 10px 20px;
-      width: 180px;
-      font-size: 15px;
-      border-radius: 20px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #f3f4f6;
-      color: #2194a8;
-      transform: scale(1.05);
-    }
-
-    .btn.secondary {
-      background: #f3f4f6;
-      color: #1e40af;
-    }
-
-    img {
-      margin-top: 20px;
-      border-radius: 20px;
-      width: 160px;
-      height: auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
-
-    footer {
-      margin: 10px;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a BacoApp</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-  <div class="logo">🍷</div>
-  <h1>Bienvenido a BacoApp</h1>
-  <p>Lo mejor en vinos, rones, whiskys y mucho más, todo al mejor precio y calidad.</p>
 
-  <section class="inicio-sesion">
-    <h2>Inicio de sesión</h2>
-  </section>
+    <div class="glass-card">
 
-  <div class="botones">
-    <a href="login.html?rol=cliente" class="btn">Inicio clientes</a>
-    <a href="login.html?rol=admin" class="btn secondary">Inicio administrador</a>
-  </div>
+        <h1 class="titulo">BIENVENIDO A BACOAPP</h1>
 
-  <img src="img/logo_bacoapp.png" alt="Logo BacoApp">
+        <p class="subtexto">
+            Vinos, rones, whiskys y mucho más… al mejor precio y calidad.
+        </p>
 
-  <footer>
-    <p>&copy; 2025 BacoApp. Todos los derechos reservados.</p>
-  </footer>
+        <h2 class="sesion">INICIO DE SESIÓN</h2>
+
+        <div class="botones">
+            <a href="login.html?rol=cliente" class="btn btn-cliente">Inicio clientes</a>
+            <a href="login.html?rol=admin" class="btn btn-admin">Inicio administrador</a>
+        </div>
+
+        <img src="img/logo_bacoapp.png" class="logo" alt="Logo BacoApp">
+
+        <footer>
+            © 2025 BacoApp. Todos los derechos reservados.
+        </footer>
+
+    </div>
+
 </body>
 </html>
 

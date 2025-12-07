@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro administradores</title>
+
+    <link rel="stylesheet" href="./css/registro-admin.css">
+
+</head>
+
+
+
+<body>
+    <header><h1>🔐 <div>Registro administradores</h1></div>
+        <p>Registro exclusivo administradores.
+    </header>
+
+    <div class="card">
+        <form id="formAdmin" style="display:block;">
+            <div class="field">
+            <label id="NombreAdminLabel" for="NombreAdmin">Nombre completo:</label>
+            <input type="text" id="NombreAdmin" name="NombreAdmin" placeholder="Ingrese su nombre completo">
+            </div>
+            <div class="field">
+            <label id="DocumentoAdminLabel" for="DocumentoAdmin">Documento de identidad:</label>
+            <input type="number" id="DocumentoAdmin" name="DocumentoAdmin" placeholder="Ingrese su documento de identidad">
+            </div>
+            <div class="field">
+            <label id="EmailAdminLabel" for="EmailAdmin">Email:</label>
+            <input type="email" id="EmailAdmin" name="EmailAdmin" placeholder="Ingrese su email" autocomplete="email">
+            </div>
+            <div class="field">
+            <label id="UsuarioAdminLabel" for="UsuarioAdmin">Usuario:</label>
+            <input type="text" id="UsuarioAdmin" name="UsuarioAdmin" placeholder="Ingrese su usuario">
+            </div>
+            <div class="field">
+            <label id="PasswordAdminLabel" for="PasswordAdmin">Contraseña:</label>
+            <input type="password" id="PasswordAdmin" name="PasswordAdmin" placeholder="Ingrese su contraseña">
+            </div>
+            <div class="field">
+            <label id="CodigoAuthLabel" for="CodigoAuth">Código de autorización:</label>
+            <input type="text" id="CodigoAuth" name="CodigoAuth" placeholder="Ingrese el código de autorización">
+            </div>
+            <button type="submit" class="btn" id="btn-registrarse-admin">Registrarse</button>
+
+            <div id="mensaje"> </div>
+
+            <div>
+                ¿Ya tienes cuenta? <a href="login.html?rol=admin">Inicia sesión aquí</a>
+
+
+            </div>
+
+        </form>
+    </div>
+    <script src="./js/registro-admin.js"></script>
+</body>
+</html>

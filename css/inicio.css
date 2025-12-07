@@ -1,0 +1,47 @@
+   body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0bd71f, #0b0b0b);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .banner {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .promo-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .promo-card {
+      background: rgba(0,0,0,0.5);
+      width: 250px;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      border: 2px solid #00ff3c;
+    }
+
+    .promo-card:hover {
+      transform: scale(1.05);
+      background: rgba(0, 0, 0, 0.8);
+      border-color: white;
+    }
+
+    .promo-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+

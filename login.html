@@ -4,110 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar sesión - BacoApp</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #6b21a8, #db2777);
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
 
-    h1 {
-      margin: 20px;
-    }
-
-    form {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 20px;
-      width: 300px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(5px);
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 10px;
-      font-size: 14px;
-    }
-
-    .btn {
-      background: rgb(255, 255, 255);
-      color: #1e40af;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      font-size: 16px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      margin-bottom: 30px;
-    }
-
-    .btn:hover {
-      background: #f3f4f6;
-      transform: scale(1.05);
-      color: #1e40af;
-    }
-
-    .extra {
-      margin-top: 15px;
-      font-size: 14px;
-      color: #f3f4f6;
-    }
-
-    .extra a {
-      color: cadetblue;
-      text-decoration: none;
-    }
-
-    .extra a:hover {
-      text-decoration: underline;
-    }
-
-    .back {
-      margin-top: 20px;
-      color: #ffd1f9;
-      text-decoration: none;
-      font-size: 14px;
-      display: inline-block;
-    }
-
-    .back:hover {
-      text-decoration: underline;
-    }
-
-    .campos {
-      margin-bottom: 20px;
-      text-align: left;
-      width: 100%;
-    }
-
-    img {
-      margin-bottom: 15px;
-      border-radius: 15px;
-      width: 100px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    }
-  </style>
+  <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
@@ -115,65 +13,37 @@
   <h1 id="titulo">Iniciar sesión</h1>
 
   <form id="form-login">
-    <div class="campos">
-      <label for="Usuario">Usuario:</label>
-      <input type="text" id="Usuario" name="Usuario" placeholder="Ingrese su Usuario">
-    </div>
+      <div class="campos">
+          <label for="Usuario">Usuario:</label>
+          <input type="text" id="Usuario" name="Usuario" placeholder="Ingrese su Usuario">
+      </div>
 
-    <div class="campos">
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña">
-    </div>
+      <div class="campos">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña">
+      </div>
 
-    <button type="submit" class="btn" id="btn-entrar">Entrar</button>
+      <button type="submit" class="btn" id="btn-entrar">Entrar</button>
 
-    <div class="extra">
-      ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a><br>
-      ¿Olvidaste la contraseña? <a href="recuperar.html">Recuperar aquí</a>
-    </div>
+      <div class="extra">
+
+          <span id="link-cliente" style="display:none;">
+              ¿No tienes cuenta? <a href="registro.html?rol=cliente">Regístrate aquí</a>
+          </span>
+
+          <span id="link-admin" style="display:none;">
+              ¿No tienes cuenta? <a href="registro-admin.html?rol=admin">Regístrate aquí</a>
+          </span>
+
+          <br><br>
+          ¿Olvidaste la contraseña? <a href="recuperar.html">Recuperar aquí</a>
+      </div>
   </form>
 
   <a href="index.html" class="back">← Volver al inicio</a>
 
-  <script>
-    
-    const params = new URLSearchParams(window.location.search);
-    const rol = params.get("rol") || "cliente";
-
-    
-    const titulo = document.getElementById("titulo");
-    const boton = document.getElementById("btn-entrar");
-    const form = document.getElementById("form-login");
-
-   
-    if (rol === "admin") {
-      titulo.textContent = "Inicio de sesión - Administrador";
-      boton.textContent = "Entrar como administrador";
-    } else {
-      titulo.textContent = "Inicio de sesión - Cliente";
-      boton.textContent = "Entrar como cliente";
-    }
-
-    form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  if (rol === "admin") {
-    window.location.href = "administrador.html"; // Página del administrador
-  } else {
-    window.location.href = "cliente.html"; // Página del cliente
-  }
-});
-
-    
-    form.addEventListener("submit", (e) => {
-      e.preventDefault(); 
-
-      if (rol === "admin") {
-        window.location.href = "administrador.html"; 
-      } else {
-        window.location.href = "tienda.html"; 
-      }
-    });
-  </script>
+  
+  <script src="./js/login.js"></script>
 </body>
 </html>
+

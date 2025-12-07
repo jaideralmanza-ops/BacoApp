@@ -4,158 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BACOAPP-Menú Principal</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-    body {
-    margin: 0;
-    font-family: arial, sans-serif;
-    background: linear-gradient(180deg, #6b21a8, #db2777);
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    }
-
-    @keyframes parpadeoNeon {
-      0%, 100% {
-        text-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
-        opacity: 1;
-      }
-      50% {
-        text-shadow: 0 0 5px #ff0033, 0 0 10px #ff0033;
-        opacity: 0.6;
-      }
-    }
 
 
-    .titulo-container {
-      background: rgba(47, 47, 47, 0.6);
-      backdrop-filter: blur(6px);
-      padding: 60px 0 20px 0;
-      position: relative;
-    border-bottom: 2px solid #ff0033;
-    }
+  <link rel="stylesheet" href="./css/administrador.css">
 
-  .neon-title {
-  font-size: clamp(48px, 15vw, 320px);
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  background: linear-gradient(270deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  background-size: 1800% 1800%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: moverColores 8s ease infinite, respiracion 3s ease-in-out infinite;
-  text-shadow: 0 0 25px rgba(255, 0, 150, 0.6);
-  margin: 0;
-  line-height: 1;
-  }
-
-@keyframes moverColores {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes respiracion {
-  0%, 100% { text-shadow: 0 0 25px rgba(255, 0, 150, 0.8); }
-  50% { text-shadow: 0 0 45px rgba(255, 0, 150, 1); }
-}
-
-
-    .version-label {
-      position: absolute;
-      bottom: 10px;
-      right: 20px;
-      font-size: 16px;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    
-    .mensaje-bienvenida {
-      text-align: center;
-      margin: 30px 0 10px 0;
-      color: #39ff14;
-    }
-
-   
-    .navbar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .menu-link {
-      background-color: #fff;
-      color: #39ff14;
-      border: 2px solid #4b0082;
-      border-radius: 10px;
-      padding: 15px;
-      font-size: 18px;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      display: inline-block;
-      width: auto;
-      max-width: 220px;
-      cursor: pointer;
-    }
-
-    .menu-link:hover {
-      background-color: #4b0082;
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .titulo-container {
-        padding: 60px 0 30px 0;
-      }
-      .version-label {
-        font-size: 14px;
-        right: 10px;
-        bottom: 5px;
-      }
-      .menu-link {
-        font-size: 14px;
-      }
-    
-    }
-    
-.btn-salir {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
-}
-
-.btn-salir:hover {
-  background: rgba(255, 255, 255, 0.4);
-  color: #6b21a8;
-}
-
-  </style>
+  
+  
 </head>
 
 <body>
 
-  <a href="login.html?rol=admin" class="btn-salir">← Salir</a>
+  
 
   <div class="titulo-container">
     <h1 class="neon-title">BACOAPP</h1>
@@ -164,8 +23,10 @@
 
   <section class="mensaje-bienvenida">
     <h2>MENÚ PRINCIPAL</h2>
-    <p>Selecciona una opción para ver su submenú</p>
   </section>
+  <div class="subtexto">
+    <h1>¿Qué deseas gestionar hoy?</h1>
+  </div>
 
   <section>
   <nav class="navbar">
@@ -177,6 +38,8 @@
       <li><a class="menu-link">📤 PROVEEDORES</a></li>
       <li><a class="menu-link">⚙️ CONFIGURACIÓN</a></li>
       <li><a class="menu-link">❓ AYUDA</a></li>
+      <li><a class="menu-link">👤 Cuenta</a></li>
+      <li><a class="menu-link">← Salir</a></li>
       
     </ul>
   </nav>

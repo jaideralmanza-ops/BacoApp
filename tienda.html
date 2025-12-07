@@ -1,196 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda-BacoApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda - BacoApp</title>
+  <link rel="stylesheet" href="css/tienda.css">
 </head>
-<style>
-    body {
-        margin: 0;
-        font-family: arial, sans-serif;
-        background: linear-gradient(180deg, #6b21a8, #db2777);
-        color: white;
-    }
-    header{
-        background-color: rgba(0, 0, 0, 0.2);
-        padding: 16px;
-        text-align: center;
-
-    }
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-
-    }
-    .nav {
-        text-align: center;
-        margin-top: 10px;
-
-    }
-    .nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-    }
-    .container {
-        max-width: 1000px;
-        margin: 30px auto;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-    .product {
-        background-color: rgba(255, 255, 255, 0.9);
-        color: black;
-        border-radius: 10px;
-        padding: 15px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-    }
-.product img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-.product h3 {
-    margin: 5px 0;
-    font-weight: bold;
-
-}
-.btn {
-    background: #6b21a8;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.btn:hover {
-    background: #db2777;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
-    color : white;
-} 
-
-.login-section {
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 40px;
-  border-radius: 20px;
-  margin: 40px auto;
-  width: 80%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.login-section h2 {
-  color: #1e3a8a;
-  margin-bottom: 20px;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.login-section button {
-  background-color: #ff4b91;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.login-section button:hover {
-  background-color: #e03e82;
-}
-
-
-.btn-salir {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
-}
-
-.btn-salir:hover {
-  background: rgba(255, 255, 255, 0.4);
-  color: #6b21a8;
-}
-
-
-
-
-</style>
-</head>
-
 <body>
-  <a href="login.html?rol=cliente" class="btn-salir">← Salir</a>
 
-<header>
-    <h1>Tienda BacoApp</h1>
-    <div class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="#Productos">Productos</a>
-    </div>
+  
+  <button id="menu-btn" class="menu-btn">☰</button>
 
-</header> 
+  
+  <aside id="sidebar" class="sidebar">
+    <button id="close-btn" class="close-btn">✕</button>
 
- <section class="container" id="productos">
-    <div class="product">
-      <img src="img/vino_tinto.jpg" alt="Vino tinto">
-      <h3>Vino Tinto Reserva</h3>
-      <p>$40.000</p>
-      <button class="btn">Agregar al carrito</button>
-    </div>
+    <h2 class="brand">BacoApp</h2>
+ 
+    <nav class="nav">
+      <ul>
+        <li><a href="tienda.html"> Inicio</a></li>
+        <li><a href="categorias.html"> Categorías</a></li>
+        <li><a href="#carrito"> Carrito</a></li>
+        <li><a href="#"> Cuenta</a></li>
+        <li><a href="index.html"> Cerrar sesión</a></li>
+      </ul>
+    </nav>
+    
+  </aside>
 
-    <div class="product">
-      <img src="img/whisky.jpg" alt="Whisky">
-      <h3>Whisky Escocés</h3>
-      <p>$120.000</p>
-      <button class="btn">Agregar al carrito</button>
-    </div>
+  <aside id="cart-sidebar" class="cart-sidebar">
 
-    <div class="product">
-      <img src="img/ron_anejo.jpg" alt="Ron">
-      <h3>Ron Añejo 12 años</h3>
-      <p>$85.000</p>
-      <button class="btn">Agregar al carrito</button>
-    </div>
+  <button class="close-cart">✕</button>
 
-    <div class="product">
-      <img src="img/vino_rosado.jpg" alt="Vino rosado">
-      <h3>Vino Rosado</h3>
-      <p>$38.000</p>
-      <button class="btn">Agregar al carrito</button>
-    </div>
+  <h2>Tu Carrito</h2>
 
+  <div class="cart-items">
+    <div id="carrito-contenido"></div>
+    
+  </div>
+
+  <div class="cart-actions">
+    <p id="total-price">Total: $0</p>
+    <button id="btn-pagar">Pagar</button>
+    <button id="btn-vaciar">Vaciar Carrito</button>
+    <button id="btn-seguir">Seguir Comprando</button>
+  </div>
+
+</aside>
+
+
+  
+  <div class="neon-title">
+  <h1>Bienvenidos a la Tienda de BacoApp</h1>
+  <p>Aquí va tu contenido principal.</p>
+  <div class="neon-line"></div>
+</div>
+
+   <div class="search">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="search-btn">🔍</button>
+</div>
+
+    <section class="banner-inicio">
+  <h1>Las mejores ofertas en todo tipo de licor y mucho mas</h1>
+  <p>Descubre nuestras promociones exclusivas y disfruta de la mejor selección.</p>
+    </section>
+    </main>
+
+    <section class="promociones">
+      
+      <div class="promo-card">
+        <img src="img/ron-medellin.jpg" alt="Ron Medellin 750ml">
+        <h3>Ron Medellin 750ml</h3>
+        <p>Antes: $63.000</p>
+        <strong>Ahora: $50.000</strong>
+        <button class="btn-ver-mas">Ver más</button>
+        <button class="btn-agregar" data-nombre="Ron Medellin 750ml" data-precio="50000">Agregar al carrito</button>
+      </div>
+
+      <div class="promo-card">
+        <img src="img/old-par.jpg" alt="Whisky Old Parr 12 años">
+        <h3>Whisky Old Parr 12 años</h3>
+        <p>Antes: $120.000</p>
+        <strong>Ahora: $95.000</strong>
+        <button class="btn-ver-mas">Ver más</button>
+        <button class="btn-agregar" data-nombre="Whisky Old Parr 12 años" data-precio="95000">Agregar al carrito</button>
+
+      </div>
+
+      <div class="promo-card">
+        <img src="img/corona.jpg" alt="Cerveza Corona 330ml">
+        <h3>Cerveza Corona 330ml</h3>
+        <p>Antes: $8.000</p>
+        <strong>Ahora: $6.500</strong>
+        <button class="btn-ver-mas">Ver más</button>
+        <button class="btn-agregar" data-nombre="Cerveza Corona 330ml" data-precio="6500">Agregar al carrito</button>
+      </div>
     </section>
 
-    <section class="login-section">
-  <h2>Accede a ofertas exclusivas, gestiona tus pedidos y descubre nuevos productos seleccionados para ti.</h2>
   
-  
-</section>
 
-<footer>
-    <p class="copyright">© 2025 BacoApp — Todos los derechos reservados</p>
-  </footer>
+  <script src="js/tienda.js"></script>
+
 </body>
 </html>

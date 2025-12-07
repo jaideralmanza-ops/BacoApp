@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0bd71f, #0b0b0b);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+
+@keyframes moverColores {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes respiracion {
+  0%, 100% { text-shadow: 0 0 20px rgba(255, 0, 150, 0.8); }
+  50% { text-shadow: 0 0 40px rgba(255, 0, 150, 1); }
+}
+
+
+.titulo-container {
+  background: rgba(50, 50, 50, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 8px 10px;
+  border-bottom: 2px solid #ff0033;
+  margin: 10px auto;    
+  width: 90%;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 0, 150, 0.3);
+}
+
+
+.neon-title {
+  font-size: clamp(40px, 8vw, 120px);
+  font-weight: bold;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+
+  background: linear-gradient(270deg,
+    #ff0000, #ff7300, #fffb00,
+    #48ff00, #00ffd5, #002bff,
+    #7a00ff, #ff00c8, #ff0000
+  );
+  background-size: 1800% 1800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: moverColores 10s ease infinite, respiracion 3s ease-in-out infinite;
+  margin: 0;
+  padding: 0;
+}
+
+
+.version-label {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.mensaje-bienvenida {
+  margin:5px 0;
+  font-size: 22px;
+  color: #05dceb;
+  text-shadow: 0 0 8px #f9f507, 0 0 15px #ea1708;
+  width: 90%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subtexto {
+  font-size: 15px;
+  color: #ffffffcc;
+  line-height: 1.4;
+  margin: 10px auto 30px auto;
+  max-width: 600px;
+  text-shadow: 0 0 8px #f9f507, 0 0 15px #ea1708;
+  margin: 5px auto 15px auto;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 190, 0.2);
+  border-radius: 12px;
+  padding: 5px 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+li{
+  list-style: none;
+  color:white;
+  border:none;
+  padding:10px 12px;
+  font-size:20px;
+  border-radius:6px;
+  cursor:pointer;
+  z-index:30; 
+  margin: 5px 0;
+
+}
+li:hover {
+  transform: scale(1.1);
+}
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 190, 0.2);
+  border-radius: 12px;
+  padding: 15px 0;
+  margin: 5px auto;
+  max-width: 900px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 900px;
+  margin: 5px auto;
+  
+}
+
+.menu-link {
+  background: linear-gradient(135deg, #f52e4c, #c3ed05);
+  color: #fefffe;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  width: 90%;
+  max-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0px;
+
+  transition: 0.3s ease;
+}
+
+.menu-link:hover {
+  background: #d2ed07f2;
+  color: white;
+  transform: scale(1.1);               
+  filter: brightness(1.2);  
+}
+
+
+.btn-salir {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+
+.btn-salir:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #6b21a8;
+}
+
+
+@media (max-width: 768px) {
+  .neon-title {
+    letter-spacing: 4px;
+  }
+
+  .menu-link {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+}
